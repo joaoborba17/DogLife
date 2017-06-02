@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Button, Alert } from 'react-native';
+import { Text, View, StyleSheet, Button, Alert, Image } from 'react-native';
 import { Constants, Google, Facebook } from 'expo';
 
 export default class App extends Component {
@@ -93,29 +93,29 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+    
         <Text style={styles.destaque}>
-        DogLife
+        DogLife 
         </Text>
-          
-      <View style={styles.button}>
-          <Button
-            title="Entrar com o Google"
-            onPress={this._handleGoogleLogin}
-          />
-      </View>
+        
+          <Image
+          source={{ uri: 'https://www.corepoweryoga.com/sites/default/files/IMCE/CPYBlog/Pets%20WIDE.jpg' }}
+          style={{ height: 140, width: 200 }}
+        />
+      
+         
       <View style={styles.button}>
        <Button
           title="Entrar com o Facebook"
           onPress={this._handleFacebookLogin}
         />
       </View>
-      
-      
-      
-      
-      
-      
-      
+       <View style={styles.button}>
+          <Button
+            title="Entrar com o Google"
+            onPress={this._handleGoogleLogin}
+          />
+      </View>
       </View>
     );
   }
@@ -148,4 +148,3 @@ button:{
   
   
 });
-
