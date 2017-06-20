@@ -9,13 +9,22 @@ import {
   MapView,
 } from 'expo';
 import { StackNavigator } from 'react-navigation';
-
+class AgendarServicos extends Component {
+  render(){
+    return(
+      <View>
+      </View>
+    );
+  }
+  
+}
 class TelaPrincipal extends Component {
   _irparaOutraTela = () => {
     const { navigate } = this.props.navigation;
 
     navigate('ProximaTela');
   };
+  
 
   _handleGoogleLogin = async () => {
     try {
@@ -188,14 +197,10 @@ class ProximaTela extends Component {
         />
         
         <View style={styles.button}> 
-        <Button 
-          title="serviços"
-          onPress={this._handleButtonPress}
-        />
       
         <Button
           title="Agendar serviços"
-          onPress={this._handleButtonPress}
+          onPress={this.__irparaOutraTela}
         />
       </View>
 
@@ -207,6 +212,10 @@ class ProximaTela extends Component {
 const AplicativoExemplo = StackNavigator({
   Main: { screen: ProximaTela },
   ProximaTela: { screen: ProximaTela },
+  AgendarServicos: {screen: AgendarServicos},
+  
 });
 
 export default AplicativoExemplo
+  
+
