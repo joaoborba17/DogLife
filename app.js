@@ -190,8 +190,8 @@ class ProximaTela extends Component {
         <MapView
           style={{ alignSelf: 'stretch', height: 200 }}
           region={{
-            latitude: this.state.locationResult.latitude,
-            longitude: this.state.locationResult.longitude,
+            latitude: 0,//this.state.locationResult.latitude,
+            longitude: 0// this.state.locationResult.longitude,
           }}
           onRegionChange={this._handleMapRegionChange}
         />
@@ -202,6 +202,9 @@ class ProximaTela extends Component {
           title="Agendar serviços"
           onPress={this.__irparaOutraTela}
         />
+      Banho
+      Tosa 
+      
       </View>
 
       </View>
@@ -217,5 +220,6 @@ const AplicativoExemplo = StackNavigator({
 });
 
 export default AplicativoExemplo
+
   
 
